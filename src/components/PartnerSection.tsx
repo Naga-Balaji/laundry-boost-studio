@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { TrendingUp, Users, Clock, Shield } from "lucide-react";
+import partnerBackground from "@/assets/partner-bg.jpg";
 
 const PartnerSection = () => {
   const benefits = [
@@ -41,7 +42,15 @@ const PartnerSection = () => {
   };
 
   return (
-    <section className="py-20 bg-hero-gradient">
+    <section 
+      className="py-20 relative"
+      style={{
+        backgroundImage: `linear-gradient(135deg, hsl(210 100% 50% / 0.95) 0%, hsl(220 100% 60% / 0.95) 100%), url(${partnerBackground})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundAttachment: 'fixed'
+      }}
+    >
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-primary-foreground mb-4">

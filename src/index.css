@@ -43,9 +43,14 @@ All colors MUST be HSL.
     --card-gradient: linear-gradient(135deg, hsl(0 0% 100%) 0%, hsl(210 40% 98%) 100%);
     --shadow-soft: 0 4px 20px -2px hsl(210 100% 50% / 0.1);
     --shadow-card: 0 8px 30px -4px hsl(210 40% 20% / 0.08);
+    --shadow-glow: 0 0 40px hsl(210 100% 50% / 0.3);
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    
+    /* Enhanced gradients for connectivity */
+    --gradient-overlay: linear-gradient(45deg, hsl(210 100% 50% / 0.1) 0%, hsl(220 100% 60% / 0.05) 100%);
+    --texture-pattern: radial-gradient(circle at 25% 25%, hsl(210 100% 50% / 0.05) 0%, transparent 50%);
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
 
     --sidebar-background: 0 0% 98%;
 
@@ -110,5 +115,22 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+    background-image: var(--texture-pattern);
+  }
+  
+  /* Smooth scrolling */
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  /* Enhanced animations */
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+  }
+  
+  @keyframes glow {
+    0%, 100% { box-shadow: 0 0 20px hsl(210 100% 50% / 0.3); }
+    50% { box-shadow: 0 0 40px hsl(210 100% 50% / 0.6); }
   }
 }

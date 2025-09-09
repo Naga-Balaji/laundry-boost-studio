@@ -1,4 +1,5 @@
 import { CheckSquare, MapPin, Shirt, Truck } from "lucide-react";
+import processBackground from "@/assets/process-bg.jpg";
 
 const HowItWorksSection = () => {
   const steps = [
@@ -25,7 +26,15 @@ const HowItWorksSection = () => {
   ];
 
   return (
-    <section className="py-20 bg-background">
+    <section 
+      className="py-20 relative"
+      style={{
+        backgroundImage: `linear-gradient(135deg, hsl(0 0% 100% / 0.98) 0%, hsl(210 40% 98% / 0.98) 100%), url(${processBackground})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundAttachment: 'fixed'
+      }}
+    >
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">

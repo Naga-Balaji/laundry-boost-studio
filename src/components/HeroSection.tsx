@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Calendar, Truck, Sparkles } from "lucide-react";
+import heroBackground from "@/assets/hero-bg.jpg";
 
 const HeroSection = () => {
   // TODO: Connect to scheduling system
@@ -15,11 +16,23 @@ const HeroSection = () => {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center bg-hero-gradient overflow-hidden">
-      {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-white rounded-full blur-3xl"></div>
-        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-white rounded-full blur-3xl"></div>
+    <section 
+      className="relative min-h-screen flex items-center justify-center overflow-hidden"
+      style={{
+        backgroundImage: `linear-gradient(135deg, hsl(210 100% 50% / 0.9) 0%, hsl(220 100% 60% / 0.9) 100%), url(${heroBackground})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundAttachment: 'fixed'
+      }}
+    >
+      {/* Enhanced Background Pattern */}
+      <div className="absolute inset-0 opacity-20">
+        <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-white rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-white rounded-full blur-3xl animate-pulse delay-700"></div>
+        <div className="absolute top-1/2 right-1/3 w-32 h-32 bg-accent rounded-full blur-2xl animate-pulse delay-500"></div>
+        {/* Floating elements for connectivity */}
+        <div className="absolute top-1/3 left-1/2 w-16 h-16 bg-white/30 rounded-full blur-xl" style={{animation: 'float 6s ease-in-out infinite'}}></div>
+        <div className="absolute bottom-1/3 left-1/4 w-24 h-24 bg-accent/30 rounded-full blur-xl" style={{animation: 'float 8s ease-in-out infinite reverse'}}></div>
       </div>
       
       <div className="container mx-auto px-4 text-center relative z-10 pt-16">

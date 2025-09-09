@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Shirt, Sparkles, Zap, Flame } from "lucide-react";
+import servicesBackground from "@/assets/services-bg.jpg";
 
 const ServicesSection = () => {
   const services = [
@@ -50,7 +51,15 @@ const ServicesSection = () => {
   };
 
   return (
-    <section className="py-20 bg-secondary/30">
+    <section 
+      className="py-20 relative"
+      style={{
+        backgroundImage: `linear-gradient(135deg, hsl(210 40% 96.1% / 0.95) 0%, hsl(0 0% 100% / 0.95) 100%), url(${servicesBackground})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundAttachment: 'fixed'
+      }}
+    >
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
@@ -67,8 +76,10 @@ const ServicesSection = () => {
             return (
               <Card 
                 key={service.id} 
-                className="relative overflow-hidden bg-card-gradient border-0 shadow-card hover:shadow-xl transition-all duration-300 hover:-translate-y-2"
+                className="relative overflow-hidden bg-card-gradient border-0 shadow-card hover:shadow-xl transition-all duration-300 hover:-translate-y-2 group"
               >
+                {/* Subtle background overlay for connectivity */}
+                <div className="absolute inset-0 bg-gradient-overlay opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 <CardHeader className="text-center pb-4">
                   <div className="inline-flex items-center justify-center w-16 h-16 bg-primary/10 rounded-full mb-4 mx-auto">
                     <IconComponent className="h-8 w-8 text-primary" />

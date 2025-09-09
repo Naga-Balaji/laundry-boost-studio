@@ -1,5 +1,6 @@
 import { MapPin, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import citiesBackground from "@/assets/cities-bg.jpg";
 
 const CitiesSection = () => {
   const cities = [
@@ -25,7 +26,15 @@ const CitiesSection = () => {
   };
 
   return (
-    <section className="py-20 bg-secondary/20">
+    <section 
+      className="py-20 relative"
+      style={{
+        backgroundImage: `linear-gradient(135deg, hsl(210 40% 96.1% / 0.95) 0%, hsl(210 40% 96.1% / 0.9) 100%), url(${citiesBackground})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundAttachment: 'fixed'
+      }}
+    >
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
