@@ -42,13 +42,13 @@ const PartnerSection = () => {
   };
 
   return (
-    <section 
+    <section
       className="py-20 relative"
       style={{
         backgroundImage: `linear-gradient(135deg, hsl(210 100% 50% / 0.95) 0%, hsl(220 100% 60% / 0.95) 100%), url(${partnerBackground})`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundAttachment: 'fixed'
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundAttachment: "fixed",
       }}
     >
       <div className="container mx-auto px-4">
@@ -57,7 +57,8 @@ const PartnerSection = () => {
             Become Our Partner
           </h2>
           <p className="text-xl text-primary-foreground/90 max-w-2xl mx-auto">
-            Join our network of successful laundry partners and grow your business with us
+            Join our network of successful laundry partners and grow your
+            business with us
           </p>
         </div>
 
@@ -88,16 +89,26 @@ const PartnerSection = () => {
         <div className="bg-white/10 rounded-2xl p-8 mb-12">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
             <div>
-              <div className="text-4xl font-bold text-primary-foreground mb-2">500+</div>
+              <div className="text-4xl font-bold text-primary-foreground mb-2">
+                500+
+              </div>
               <div className="text-primary-foreground/80">Active Partners</div>
             </div>
             <div>
-              <div className="text-4xl font-bold text-primary-foreground mb-2">₹50K+</div>
-              <div className="text-primary-foreground/80">Average Monthly Revenue</div>
+              <div className="text-4xl font-bold text-primary-foreground mb-2">
+                ₹50K+
+              </div>
+              <div className="text-primary-foreground/80">
+                Average Monthly Revenue
+              </div>
             </div>
             <div>
-              <div className="text-4xl font-bold text-primary-foreground mb-2">95%</div>
-              <div className="text-primary-foreground/80">Partner Satisfaction</div>
+              <div className="text-4xl font-bold text-primary-foreground mb-2">
+                95%
+              </div>
+              <div className="text-primary-foreground/80">
+                Partner Satisfaction
+              </div>
             </div>
           </div>
         </div>
@@ -108,18 +119,18 @@ const PartnerSection = () => {
             Ready to Start Your Partnership Journey?
           </h3>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button 
+            <Button
               onClick={handleBecomePartner}
-              size="lg" 
+              size="lg"
               className="bg-accent hover:bg-accent/90 text-accent-foreground text-lg px-8 py-6"
             >
               Become a Partner
             </Button>
-            <Button 
+            <Button
               onClick={handleLearnMore}
-              size="lg" 
-              variant="outline" 
-              className="border-2 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary text-lg px-8 py-6"
+              size="lg"
+              variant="outline"
+              className="border-2 border-primary-foreground text-blue-500 hover:bg-primary-foreground  hover:text-blue-900"
             >
               Learn More
             </Button>
