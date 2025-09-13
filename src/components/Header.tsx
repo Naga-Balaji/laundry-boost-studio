@@ -22,35 +22,47 @@ const Header = () => {
           </div>
           <span className="text-xl font-bold text-foreground">LaundryPro</span>
         </div>
-        
+
         <nav className="hidden md:flex items-center space-x-8">
-          <button 
-            onClick={() => handleNavigation('home')}
-            className="text-foreground hover:text-primary transition-colors"
+          <button
+            onClick={() => handleNavigation("partner")}
+            className="px-4 py-2 rounded-md text-foreground transition-colors border border-transparent hover:border-gray-400 hover:text-primary"
           >
             Home
           </button>
-          <button 
-            onClick={() => handleNavigation('services')}
-            className="text-foreground hover:text-primary transition-colors"
+
+          <button
+            onClick={() => handleNavigation("partner")}
+            className="px-4 py-2 rounded-md text-foreground transition-colors border border-transparent hover:border-gray-400 hover:text-primary"
           >
             Services
           </button>
-          <button 
-            onClick={() => handleNavigation('about')}
+
+          {/*<button
+            onClick={() => handleNavigation("about")}
             className="text-foreground hover:text-primary transition-colors"
           >
             About
+          </button>*/}
+          <button
+            onClick={() => handleNavigation("partner")}
+            className="px-4 py-2 rounded-md text-foreground transition-colors border border-transparent hover:border-gray-400 hover:text-primary"
+          >
+            About
           </button>
-          <button 
-            onClick={() => handleNavigation('partner')}
-            className="text-foreground hover:text-primary transition-colors"
+
+          <button
+            onClick={() => handleNavigation("partner")}
+            className="px-4 py-2 rounded-md text-foreground transition-colors border border-transparent hover:border-gray-400 hover:text-primary"
           >
             Become a Partner
           </button>
         </nav>
 
-        <Button onClick={handleBookNow} className="bg-primary hover:bg-primary-hover">
+        <Button
+          onClick={handleBookNow}
+          className="bg-primary hover:bg-primary-hover"
+        >
           Book Now
         </Button>
       </div>

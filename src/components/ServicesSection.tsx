@@ -6,7 +6,7 @@ import servicesBackground from "@/assets/services-bg.jpg";
 const ServicesSection = () => {
   const services = [
     {
-      id: 'wash-fold',
+      id: "wash-fold",
       icon: Shirt,
       title: "Wash & Fold",
       price: "₹45",
@@ -15,7 +15,7 @@ const ServicesSection = () => {
       features: ["Gentle detergents", "Fabric softener", "Neat folding"],
     },
     {
-      id: 'wash-iron',
+      id: "wash-iron",
       icon: Flame,
       title: "Wash & Iron",
       price: "₹65",
@@ -24,7 +24,7 @@ const ServicesSection = () => {
       features: ["Premium pressing", "Wrinkle-free finish", "Hangers included"],
     },
     {
-      id: 'dry-clean',
+      id: "dry-clean",
       icon: Sparkles,
       title: "Dry Clean",
       price: "₹95",
@@ -33,7 +33,7 @@ const ServicesSection = () => {
       features: ["Delicate care", "Stain removal", "Shape retention"],
     },
     {
-      id: 'express',
+      id: "express",
       icon: Zap,
       title: "Express Service",
       price: "₹110",
@@ -51,13 +51,13 @@ const ServicesSection = () => {
   };
 
   return (
-    <section 
-      className="py-20 relative"
+    <section
+      className="py-10 relative"
       style={{
         backgroundImage: `linear-gradient(135deg, hsl(210 40% 96.1% / 0.95) 0%, hsl(0 0% 100% / 0.95) 100%), url(${servicesBackground})`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundAttachment: 'fixed'
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundAttachment: "fixed",
       }}
     >
       <div className="container mx-auto px-4">
@@ -66,7 +66,8 @@ const ServicesSection = () => {
             Our Services
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Choose from our range of professional laundry services designed for your convenience
+            Choose from our range of professional laundry services designed for
+            your convenience
           </p>
         </div>
 
@@ -74,8 +75,8 @@ const ServicesSection = () => {
           {services.map((service) => {
             const IconComponent = service.icon;
             return (
-              <Card 
-                key={service.id} 
+              <Card
+                key={service.id}
                 className="relative overflow-hidden bg-card-gradient border-0 shadow-card hover:shadow-xl transition-all duration-300 hover:-translate-y-2 group"
               >
                 {/* Subtle background overlay for connectivity */}
@@ -88,26 +89,33 @@ const ServicesSection = () => {
                     {service.title}
                   </CardTitle>
                   <div className="flex items-baseline justify-center gap-1">
-                    <span className="text-3xl font-bold text-primary">{service.price}</span>
-                    <span className="text-muted-foreground">{service.unit}</span>
+                    <span className="text-3xl font-bold text-primary">
+                      {service.price}
+                    </span>
+                    <span className="text-muted-foreground">
+                      {service.unit}
+                    </span>
                   </div>
                 </CardHeader>
-                
+
                 <CardContent className="pt-0">
                   <p className="text-muted-foreground text-center mb-4">
                     {service.description}
                   </p>
-                  
+
                   <ul className="space-y-2 mb-6">
                     {service.features.map((feature, index) => (
-                      <li key={index} className="flex items-center text-sm text-foreground">
+                      <li
+                        key={index}
+                        className="flex items-center text-sm text-foreground"
+                      >
                         <div className="w-2 h-2 bg-primary rounded-full mr-3 flex-shrink-0"></div>
                         {feature}
                       </li>
                     ))}
                   </ul>
-                  
-                  <Button 
+
+                  <Button
                     onClick={() => handleBookService(service.id, service.title)}
                     className="w-full bg-primary hover:bg-primary-hover"
                   >
